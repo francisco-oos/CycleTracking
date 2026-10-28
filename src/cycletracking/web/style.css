@@ -1,0 +1,31 @@
+:root { font-family: system-ui, -apple-system, Segoe UI, sans-serif; color: #1b2840; background: #f4f7fb; line-height: 1.5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.header { background: #172945; color: white; padding: 16px max(20px, calc((100vw - 1140px)/2)); display: flex; justify-content: space-between; gap: 14px; align-items: center; }
+.sub { color: #a8bedc; font-size: .8rem; }
+.lang { display: flex; gap: 8px; align-items: center; }
+.wrap { max-width: 1140px; margin: auto; padding: 24px 18px; }
+h1 { font-size: 1.65rem; margin: 10px 0 16px; }
+h2 { font-size: 1.15rem; margin-top: 0; }
+h3 { font-size: 1rem; }
+.banner { background: #fff6d7; border-left: 4px solid #d5a126; padding: 10px 15px; border-radius: 5px; }
+.grid { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(280px, 1.1fr); gap: 16px; margin: 16px 0; }
+.panel { background: white; border: 1px solid #e0e6ee; border-radius: 12px; padding: 18px; box-shadow: 0 2px 10px #1027470a; }
+.form { display: flex; flex-direction: column; gap: 12px; }
+.form label { display: flex; flex-direction: column; gap: 4px; }
+.row { display: flex; flex-wrap: wrap; gap: 9px; align-items: stretch; }
+input, select, textarea { min-width: 0; font: inherit; padding: 10px; border: 1px solid #aebbd0; border-radius: 7px; background: #fff; color: #1b2840; }
+.row input { flex: 1 1 170px; }
+textarea { min-height: 68px; resize: vertical; }
+button { font: inherit; background: #214b86; color: white; border: none; border-radius: 7px; padding: 10px 14px; cursor: pointer; }
+button:hover { background: #16355f; }
+button.secondary { background: #e4ebf4; color: #253f63; }
+button:disabled { opacity: .65; cursor: wait; }
+.toolbar { display: flex; gap: 14px; align-items: center; justify-content: flex-end; }
+.asset-list, .timeline { list-style: none; padding: 0; }
+.asset-list li, .timeline li { border-bottom: 1px solid #e8edf4; padding: 8px 0; }
+.asset-list button { width: 100%; text-align: left; background: #eef3fa; color: #234568; }
+.timeline small { display: block; color: #5c708b; }
+.muted { color: #5d6e86; }
+#status { min-height: 28px; font-weight: 600; }
+@media (max-width: 770px) { .grid { grid-template-columns: 1fr; } .wrap { padding: 14px 12px; } }

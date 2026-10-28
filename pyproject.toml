@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cycletracking"
+version = "0.1.0a0"
+description = "Control Operativo e Inventarios con trazabilidad y una autoridad por dominio"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.118,<1",
+  "uvicorn>=0.35,<1",
+  "SQLAlchemy>=2.0.43,<3",
+  "psycopg[binary]>=3.2.9,<4",
+  "pydantic>=2.11,<3",
+  "pwdlib[argon2]>=0.2,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<10", "httpx>=0.28,<1", "ruff>=0.13,<1"]
+
+[project.scripts]
+cyclectl = "cycletracking.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.setuptools.package-data]
+cycletracking = ["locales/*.json", "web/*"]
