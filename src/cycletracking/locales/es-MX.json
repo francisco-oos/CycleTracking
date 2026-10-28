@@ -30,5 +30,15 @@
   "event.DAMAGED_REPORTED": "Daño reportado",
   "event.SEIZED_REPORTED": "Incautación reportada",
   "event.FOUND_REPORTED": "Equipo visto/encontrado",
-  "event.DOCUMENT_RECORDED": "Documento registrado"
+  "event.DOCUMENT_RECORDED": "Documento registrado",
+  "status.REGISTERED": "Registrado",
+  "status.AVAILABLE": "Disponible",
+  "status.DEPLOYED": "Tendido",
+  "status.IN_MAINTENANCE": "En mantenimiento",
+  "status.MISSING": "Extraviado",
+  "status.STOLEN": "Robado",
+  "status.SEIZED": "Incautado",
+  "status.DAMAGED": "Dañado",
+  "status.RETURNED": "Devuelto",
+  "status.RETIRED": "Retirado"
 }

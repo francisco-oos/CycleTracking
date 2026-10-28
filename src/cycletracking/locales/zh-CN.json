@@ -30,5 +30,15 @@
   "event.DAMAGED_REPORTED": "已报告损坏",
   "event.SEIZED_REPORTED": "已报告扣押",
   "event.FOUND_REPORTED": "已发现设备",
-  "event.DOCUMENT_RECORDED": "文档已登记"
+  "event.DOCUMENT_RECORDED": "文档已登记",
+  "status.REGISTERED": "已登记",
+  "status.AVAILABLE": "可用",
+  "status.DEPLOYED": "已部署",
+  "status.IN_MAINTENANCE": "维修中",
+  "status.MISSING": "遗失",
+  "status.STOLEN": "被盗",
+  "status.SEIZED": "被扣押",
+  "status.DAMAGED": "损坏",
+  "status.RETURNED": "已归还",
+  "status.RETIRED": "已退役"
 }

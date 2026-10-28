@@ -30,5 +30,15 @@
   "event.DAMAGED_REPORTED": "Damage reported",
   "event.SEIZED_REPORTED": "Seizure reported",
   "event.FOUND_REPORTED": "Asset sighted/found",
-  "event.DOCUMENT_RECORDED": "Document recorded"
+  "event.DOCUMENT_RECORDED": "Document recorded",
+  "status.REGISTERED": "Registered",
+  "status.AVAILABLE": "Available",
+  "status.DEPLOYED": "Deployed",
+  "status.IN_MAINTENANCE": "In maintenance",
+  "status.MISSING": "Missing",
+  "status.STOLEN": "Stolen",
+  "status.SEIZED": "Seized",
+  "status.DAMAGED": "Damaged",
+  "status.RETURNED": "Returned",
+  "status.RETIRED": "Retired"
 }

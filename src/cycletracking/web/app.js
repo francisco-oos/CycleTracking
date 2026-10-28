@@ -54,6 +54,8 @@ async function switchLanguage() {
     $("identifier").placeholder = dictionary("asset.serial");
     $("observation-note").placeholder = dictionary("action.reason");
     $("decision-note").placeholder = dictionary("action.reason");
+    for (const option of $("observation-kind").options) option.textContent = dictionary("event." + option.value);
+    for (const option of $("decision-status").options) option.textContent = dictionary("status." + option.value);
     if (me) setText("identity", me.username + " · " + dictionary("role." + me.role));
     if (selected) await loadDetails(selected.id);
   } catch (e) { showStatus(e.message); }
@@ -71,7 +73,7 @@ async function loadAssets() {
   for (const asset of assets) {
     const li = document.createElement("li");
     const id = asset.identifiers.map((x) => x.kind + ": " + x.value).join(", ");
-    const button = addText(li, "button", id + " · " + asset.equipment_type + " · " + asset.status);
+    const button = addText(li, "button", id + " · " + asset.equipment_type + " · " + dictionary("status." + asset.status));
     button.type = "button";
     button.addEventListener("click", () => loadDetails(asset.id).catch((e) => showStatus(e.message)));
     $("assets").appendChild(li);
@@ -81,7 +83,7 @@ async function loadDetails(id) {
   const data = await request("/api/v1/assets/" + encodeURIComponent(id));
   selected = data.asset;
   const idText = selected.identifiers.map((x) => x.kind + ": " + x.value).join(", ");
-  setText("details", idText + " · " + selected.equipment_type + " · " + selected.status + " · v" + selected.version);
+  setText("details", idText + " · " + selected.equipment_type + " · " + dictionary("status." + selected.status) + " · v" + selected.version);
   clear("events");
   for (const ev of data.events) {
     const li = document.createElement("li");
