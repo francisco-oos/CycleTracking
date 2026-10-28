@@ -1,0 +1,19 @@
+{
+  "app.title": "CycleTracking · Control de Inventario",
+  "auth.username": "Usuario",
+  "auth.password": "Contraseña",
+  "auth.login": "Entrar",
+  "auth.logout": "Cerrar sesión",
+  "asset.search": "Buscar equipo por identificador",
+  "asset.title": "Equipos registrados",
+  "asset.empty": "No hay equipos para mostrar",
+  "asset.serial": "Identificador",
+  "asset.type": "Tipo",
+  "asset.status": "Estado oficial",
+  "asset.version": "Versión",
+  "role.OPERATIVO": "Control Operativo",
+  "role.INVENTARIOS": "Control de Inventarios",
+  "role.ADMIN": "Administración técnica",
+  "notice.alpha": "Versión inicial de pruebas. No usar con datos reales.",
+  "error.generic": "No se pudo completar la operación."
+}

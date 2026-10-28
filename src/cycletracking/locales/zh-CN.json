@@ -1,0 +1,19 @@
+{
+  "app.title": "CycleTracking · 库存管理",
+  "auth.username": "用户名",
+  "auth.password": "密码",
+  "auth.login": "登录",
+  "auth.logout": "退出登录",
+  "asset.search": "按标识符搜索设备",
+  "asset.title": "已登记设备",
+  "asset.empty": "没有可显示的设备",
+  "asset.serial": "标识符",
+  "asset.type": "设备类型",
+  "asset.status": "官方状态",
+  "asset.version": "版本",
+  "role.OPERATIVO": "运营控制",
+  "role.INVENTARIOS": "库存管理",
+  "role.ADMIN": "技术管理",
+  "notice.alpha": "初始测试版本。请勿使用真实数据。",
+  "error.generic": "无法完成操作。"
+}

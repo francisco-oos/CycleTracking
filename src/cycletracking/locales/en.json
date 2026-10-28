@@ -1,0 +1,19 @@
+{
+  "app.title": "CycleTracking · Inventory Control",
+  "auth.username": "Username",
+  "auth.password": "Password",
+  "auth.login": "Sign in",
+  "auth.logout": "Sign out",
+  "asset.search": "Search equipment by identifier",
+  "asset.title": "Registered equipment",
+  "asset.empty": "No equipment to display",
+  "asset.serial": "Identifier",
+  "asset.type": "Type",
+  "asset.status": "Official status",
+  "asset.version": "Version",
+  "role.OPERATIVO": "Operations Control",
+  "role.INVENTARIOS": "Inventory Control",
+  "role.ADMIN": "Technical administration",
+  "notice.alpha": "Initial test release. Do not use with real data.",
+  "error.generic": "The operation could not be completed."
+}
