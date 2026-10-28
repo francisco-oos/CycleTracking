@@ -15,5 +15,20 @@
   "role.INVENTARIOS": "Inventory Control",
   "role.ADMIN": "Technical administration",
   "notice.alpha": "Initial test release. Do not use with real data.",
-  "error.generic": "The operation could not be completed."
+  "error.generic": "The operation could not be completed.",
+  "action.register": "Register equipment",
+  "asset.dossier": "Dossier",
+  "action.observe": "Record observation",
+  "action.confirm": "Confirm status",
+  "action.reason": "Reason and source",
+  "action.saved": "Changes saved",
+  "asset.evidence": "Evidence",
+  "event.REGISTERED": "Asset registered",
+  "event.STATUS_CONFIRMED": "Status confirmed",
+  "event.MISSING_REPORTED": "Missing reported",
+  "event.STOLEN_REPORTED": "Theft reported",
+  "event.DAMAGED_REPORTED": "Damage reported",
+  "event.SEIZED_REPORTED": "Seizure reported",
+  "event.FOUND_REPORTED": "Asset sighted/found",
+  "event.DOCUMENT_RECORDED": "Document recorded"
 }

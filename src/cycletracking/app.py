@@ -10,6 +10,9 @@ from pathlib import Path
 from uuid import uuid4
 
 from fastapi import Depends, FastAPI, HTTPException, Query
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+from sqlalchemy import text
 from fastapi.security import HTTPAuthorizationCredentials
 from sqlalchemy import create_engine, select
 from sqlalchemy.exc import IntegrityError
@@ -44,7 +47,11 @@ def create_app(database_url: str | None = None) -> FastAPI:
     api = FastAPI(title="CycleTracking", version=__version__, lifespan=lifespan)
 
     @api.get("/health")
-    def health():
+    def health(db: Session = Depends(db_session)):
+        try:
+            db.execute(text("SELECT 1"))
+        except Exception:
+            raise HTTPException(503, detail={"code": "DATABASE_UNAVAILABLE"})
         return {"status": "ok", "version": __version__}
 
     @api.post("/api/v1/auth/login")
@@ -186,5 +193,26 @@ def create_app(database_url: str | None = None) -> FastAPI:
             raise HTTPException(404, detail={"code": "LANGUAGE_UNSUPPORTED"})
         file = Path(__file__).parent / "locales" / (language + ".json")
         return json.loads(file.read_text(encoding="utf-8"))
+
+    # La interfaz ligera sirve como demostración funcional; las operaciones
+    # de negocio se autorizan siempre en los endpoints, nunca desde el HTML.
+    web_dir = Path(__file__).parent / "web"
+    api.mount("/static", StaticFiles(directory=web_dir), name="static")
+
+    @api.get("/", include_in_schema=False)
+    def homepage():
+        return FileResponse(web_dir / "index.html")
+
+    @api.middleware("http")
+    async def secure_headers(request, call_next):
+        response = await call_next(request)
+        response.headers["X-Content-Type-Options"] = "nosniff"
+        response.headers["Referrer-Policy"] = "no-referrer"
+        response.headers["X-Frame-Options"] = "DENY"
+        response.headers["Content-Security-Policy"] = (
+            "default-src 'self'; script-src 'self'; style-src 'self'; "
+            "img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'"
+        )
+        return response
 
     return api

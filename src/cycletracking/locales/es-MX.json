@@ -15,5 +15,20 @@
   "role.INVENTARIOS": "Control de Inventarios",
   "role.ADMIN": "Administración técnica",
   "notice.alpha": "Versión inicial de pruebas. No usar con datos reales.",
-  "error.generic": "No se pudo completar la operación."
+  "error.generic": "No se pudo completar la operación.",
+  "action.register": "Alta de equipo",
+  "asset.dossier": "Expediente",
+  "action.observe": "Registrar observación",
+  "action.confirm": "Confirmar estado",
+  "action.reason": "Justificación y fuente",
+  "action.saved": "Cambios guardados",
+  "asset.evidence": "Evidencia",
+  "event.REGISTERED": "Alta de equipo",
+  "event.STATUS_CONFIRMED": "Estado confirmado",
+  "event.MISSING_REPORTED": "Extravío reportado",
+  "event.STOLEN_REPORTED": "Robo reportado",
+  "event.DAMAGED_REPORTED": "Daño reportado",
+  "event.SEIZED_REPORTED": "Incautación reportada",
+  "event.FOUND_REPORTED": "Equipo visto/encontrado",
+  "event.DOCUMENT_RECORDED": "Documento registrado"
 }

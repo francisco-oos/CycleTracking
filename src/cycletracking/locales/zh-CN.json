@@ -15,5 +15,20 @@
   "role.INVENTARIOS": "库存管理",
   "role.ADMIN": "技术管理",
   "notice.alpha": "初始测试版本。请勿使用真实数据。",
-  "error.generic": "无法完成操作。"
+  "error.generic": "无法完成操作。",
+  "action.register": "登记设备",
+  "asset.dossier": "设备档案",
+  "action.observe": "记录观察",
+  "action.confirm": "确认状态",
+  "action.reason": "理由和来源",
+  "action.saved": "更改已保存",
+  "asset.evidence": "证据",
+  "event.REGISTERED": "设备登记",
+  "event.STATUS_CONFIRMED": "状态已确认",
+  "event.MISSING_REPORTED": "已报告遗失",
+  "event.STOLEN_REPORTED": "已报告被盗",
+  "event.DAMAGED_REPORTED": "已报告损坏",
+  "event.SEIZED_REPORTED": "已报告扣押",
+  "event.FOUND_REPORTED": "已发现设备",
+  "event.DOCUMENT_RECORDED": "文档已登记"
 }
